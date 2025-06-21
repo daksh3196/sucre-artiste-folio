@@ -5,11 +5,11 @@ export const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <div className="font-playfair text-3xl font-bold mb-4">
-            Atelier Pâtisserie
+            Atelier Patisserie
           </div>
           <p className="text-cream/80 mb-6 max-w-2xl mx-auto">
-            L'excellence de la pâtisserie française, 
-            transmise avec passion et créativité depuis trois générations.
+            The excellence of French patisserie, 
+            passed down with passion and creativity for three generations.
           </p>
           
           <div className="flex justify-center space-x-6 mb-8">
@@ -26,7 +26,7 @@ export const Footer = () => {
           
           <div className="border-t border-cream/20 pt-8">
             <p className="text-cream/60 text-sm">
-              © 2024 Atelier Pâtisserie. Tous droits réservés. Créé avec passion à Paris.
+              © 2024 Atelier Patisserie. All rights reserved. Created with passion in Paris.
             </p>
           </div>
         </div>

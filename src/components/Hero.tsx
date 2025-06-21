@@ -14,13 +14,13 @@ export const Hero = () => {
       
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 animate-fade-in">
         <h1 className="font-playfair text-5xl sm:text-6xl lg:text-7xl font-bold text-burgundy mb-6">
-          L'Art de la
-          <span className="block text-gold">Pâtisserie Française</span>
+          The Art of
+          <span className="block text-gold">French Patisserie</span>
         </h1>
         
         <p className="text-xl sm:text-2xl text-charcoal/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-          Créations artisanales inspirées de la tradition française, 
-          où chaque pâtisserie raconte une histoire de passion et d'excellence.
+          Artisanal creations inspired by French tradition, 
+          where every pastry tells a story of passion and excellence.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -28,13 +28,13 @@ export const Hero = () => {
             onClick={() => document.getElementById('specialties')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-burgundy text-cream px-8 py-4 rounded-lg font-medium text-lg hover:bg-burgundy/90 transition-colors duration-200 hover-lift"
           >
-            Découvrir mes créations
+            Discover My Creations
           </button>
           <button
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             className="border-2 border-burgundy text-burgundy px-8 py-4 rounded-lg font-medium text-lg hover:bg-burgundy hover:text-cream transition-all duration-200 hover-lift"
           >
-            Me contacter
+            Contact Me
           </button>
         </div>
       </div>

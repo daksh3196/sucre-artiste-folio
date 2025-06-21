@@ -1,11 +1,11 @@
 
 const galleryImages = [
-  { src: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Macarons colorés" },
-  { src: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Tarte aux fruits" },
-  { src: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Éclairs au chocolat" },
-  { src: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Entremets moderne" },
-  { src: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Croissants artisanaux" },
-  { src: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Chocolats fins" }
+  { src: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Colorful macarons" },
+  { src: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Fruit tart" },
+  { src: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Chocolate éclairs" },
+  { src: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Modern entremets" },
+  { src: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Artisanal croissants" },
+  { src: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Fine chocolates" }
 ];
 
 export const Gallery = () => {
@@ -14,12 +14,12 @@ export const Gallery = () => {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-burgundy mb-6">
-            Galerie
+            Gallery
           </h2>
           <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
           <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-            Découvrez mes dernières créations à travers cette sélection 
-            de photographies mettant en valeur l'art de la pâtisserie française.
+            Discover my latest creations through this curated selection 
+            of photographs showcasing the art of French patisserie.
           </p>
         </div>
 

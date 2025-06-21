@@ -3,34 +3,34 @@ import { Cake } from "lucide-react";
 
 const specialties = [
   {
-    title: "Macarons Parisiens",
-    description: "Délicats macarons aux saveurs authentiques, coque parfaite et ganache onctueuse.",
+    title: "Parisian Macarons",
+    description: "Delicate macarons with authentic flavors, perfect shells and smooth ganache filling.",
     image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     featured: true
   },
   {
-    title: "Éclairs Revisités",
-    description: "Éclairs classiques sublimés par des créations contemporaines et audacieuses.",
+    title: "Reimagined Éclairs",
+    description: "Classic éclairs elevated with contemporary and bold creations.",
     image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
   },
   {
-    title: "Tartes Signature",
-    description: "Tartes aux fruits de saison avec pâtes artisanales et crèmes d'exception.",
+    title: "Signature Tarts",
+    description: "Seasonal fruit tarts with artisanal pastry shells and exceptional creams.",
     image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
   },
   {
-    title: "Entremets Modernes",
-    description: "Créations contemporaines alliant textures surprenantes et saveurs harmonieuses.",
+    title: "Modern Entremets",
+    description: "Contemporary creations combining surprising textures and harmonious flavors.",
     image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
   },
   {
-    title: "Viennoiseries",
-    description: "Croissants, pains au chocolat et brioches façonnés selon la tradition française.",
+    title: "French Viennoiseries",
+    description: "Croissants, pain au chocolat and brioches crafted according to French tradition.",
     image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
   },
   {
-    title: "Chocolats Artisanaux",
-    description: "Bonbons de chocolat fins créés avec les meilleurs cacaos du monde.",
+    title: "Artisanal Chocolates",
+    description: "Fine chocolate bonbons created with the world's finest cocoas.",
     image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
   }
 ];
@@ -41,12 +41,12 @@ export const Specialties = () => {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-burgundy mb-6">
-            Mes Spécialités
+            My Specialties
           </h2>
           <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
           <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-            Une sélection de mes créations les plus emblématiques, 
-            fruit de années de perfectionnement et d'innovation.
+            A selection of my most emblematic creations, 
+            the result of years of perfection and innovation.
           </p>
         </div>
 
@@ -85,7 +85,7 @@ export const Specialties = () => {
 
         <div className="text-center mt-12">
           <button className="bg-burgundy text-cream px-8 py-4 rounded-lg font-medium text-lg hover:bg-burgundy/90 transition-colors duration-200 hover-lift">
-            Voir toutes mes créations
+            View All My Creations
           </button>
         </div>
       </div>
