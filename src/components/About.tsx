@@ -104,7 +104,7 @@ export const About = () => {
               <motion.img
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.6 }}
-                src="https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="https://ap-south-1.graphassets.com/cmc4r40nr0eww06o9aphl1syd/cmc5pkaa41zeq07o8weu0x180"
                 alt="Pastry chef creating artisanal desserts"
                 className="w-full h-full object-cover"
               />

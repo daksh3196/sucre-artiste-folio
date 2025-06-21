@@ -6,28 +6,28 @@ const experiences = [
   {
     title: "Pastry Chef Commie II",
     company: "Torte Gurugram",
-    period: "2023 - Present",
+    period: "2024 - Present",
     description: "Leading dessert creation at Gurugram's premier experiential dessert bar and cloud kitchen, crafting innovative desserts that blend traditional techniques with modern presentation.",
     icon: Briefcase
   },
   {
     title: "Pastry Chef Commie III",
     company: "Torte Gurugram",
-    period: "2022 - 2023", 
+    period: "2024 - 2024", 
     description: "Developed expertise in cloud kitchen operations and experiential dining, creating signature desserts for Delhi NCR's unique dessert destination.",
     icon: Award
   },
   {
     title: "Pastry Trainee/Intern",
     company: "The Oberoi Gurugram",
-    period: "2021 - 2022",
+    period: "2023 - 2024",
     description: "Gained foundational experience in luxury hospitality pastry operations, learning from master chefs and understanding high-end dessert preparation standards.",
     icon: Users
   },
   {
     title: "Professional Training",
-    company: "APCA Malaysia, Gurugram",
-    period: "2021",
+    company: "APCA India, Gurugram",
+    period: "2022 - 2023",
     description: "Completed comprehensive pastry arts certification, mastering international techniques, ingredient knowledge, and professional pastry standards.",
     icon: Calendar
   }
@@ -82,7 +82,7 @@ export const Experience = () => {
                     {experience.title}
                   </h3>
                   <p className="text-gold font-medium mb-2">
-                    {experience.company} • {experience.period}
+                    <i>{experience.company} • {experience.period} </i>
                   </p>
                   <p className="text-charcoal/80">
                     {experience.description}
