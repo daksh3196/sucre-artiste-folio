@@ -29,15 +29,15 @@ export const Header = () => {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
           <div className="font-playfair text-2xl font-bold text-burgundy">
-            Atelier Patisserie
+            Sweet Artistry
           </div>
           
           <div className="hidden md:flex space-x-8">
             {[
               { label: "Home", id: "hero" },
               { label: "About", id: "about" },
-              { label: "Experience", id: "experience" },
-              { label: "Specialties", id: "specialties" },
+              { label: "Journey", id: "experience" },
+              { label: "Creations", id: "specialties" },
               { label: "Gallery", id: "gallery" },
               { label: "Contact", id: "contact" },
             ].map((item) => (

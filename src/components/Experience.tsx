@@ -3,31 +3,31 @@ import { Briefcase, Award, Users, Calendar } from "lucide-react";
 
 const experiences = [
   {
-    title: "Head Pastry Chef",
-    company: "Le Grand Hotel, Paris",
-    period: "2020 - Present",
-    description: "Leading a team of 8 pastry chefs, creating signature desserts for Michelin-starred restaurant and luxury events.",
+    title: "Pastry Chef Commie II",
+    company: "Torte Gurugram",
+    period: "2023 - Present",
+    description: "Leading dessert creation at Gurugram's premier experiential dessert bar and cloud kitchen, crafting innovative desserts that blend traditional techniques with modern presentation.",
     icon: Briefcase
   },
   {
-    title: "Senior Pastry Chef",
-    company: "Patisserie Laurent Dubois",
-    period: "2017 - 2020", 
-    description: "Specialized in traditional French pastries and wedding cakes, managing daily production for high-end clientele.",
+    title: "Pastry Chef Commie III",
+    company: "Torte Gurugram",
+    period: "2022 - 2023", 
+    description: "Developed expertise in cloud kitchen operations and experiential dining, creating signature desserts for Delhi NCR's unique dessert destination.",
     icon: Award
   },
   {
-    title: "Pastry Chef",
-    company: "Le Bristol Paris",
-    period: "2014 - 2017",
-    description: "Crafted artisanal desserts for luxury hotel guests, developed seasonal menu items and trained junior staff.",
+    title: "Pastry Trainee/Intern",
+    company: "The Oberoi Gurugram",
+    period: "2021 - 2022",
+    description: "Gained foundational experience in luxury hospitality pastry operations, learning from master chefs and understanding high-end dessert preparation standards.",
     icon: Users
   },
   {
-    title: "Junior Pastry Chef",
-    company: "Pierre Hermé",
-    period: "2012 - 2014",
-    description: "Apprenticed under master pastry chefs, perfecting techniques in macaron making and chocolate work.",
+    title: "Professional Training",
+    company: "APCA Malaysia, Gurugram",
+    period: "2021",
+    description: "Completed comprehensive pastry arts certification, mastering international techniques, ingredient knowledge, and professional pastry standards.",
     icon: Calendar
   }
 ];
@@ -38,12 +38,12 @@ export const Experience = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-burgundy mb-6">
-            Professional Experience
+            My Professional Journey
           </h2>
           <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
           <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-            Over a decade of experience in prestigious French patisseries, 
-            honing my craft and developing expertise in traditional and modern techniques.
+            From academic excellence to pastry artistry, each step has shaped 
+            my unique approach to creating extraordinary desserts.
           </p>
         </div>
 
@@ -85,6 +85,24 @@ export const Experience = () => {
               </div>
             );
           })}
+        </div>
+
+        <div className="mt-16 text-center animate-fade-in">
+          <div className="bg-cream/80 rounded-2xl p-8 elegant-border">
+            <h3 className="font-playfair text-2xl font-semibold text-burgundy mb-4">
+              Educational Background
+            </h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="p-4 bg-champagne/30 rounded-lg">
+                <h4 className="font-medium text-burgundy mb-2">Bachelor's in International Studies</h4>
+                <p className="text-charcoal/70">Jindal Global University</p>
+              </div>
+              <div className="p-4 bg-champagne/30 rounded-lg">
+                <h4 className="font-medium text-burgundy mb-2">LLB Law</h4>
+                <p className="text-charcoal/70">Jindal Global University</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

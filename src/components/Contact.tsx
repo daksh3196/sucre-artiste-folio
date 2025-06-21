@@ -5,12 +5,12 @@ export const Contact = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-burgundy mb-6">
-            Contact
+            Let's Create Together
           </h2>
           <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
           <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
-            Let's create your exceptional moments together. 
-            Custom orders and advice for your special events.
+            Ready to bring your dessert vision to life? 
+            Let's collaborate on creating unforgettable sweet experiences.
           </p>
         </div>
 
@@ -18,7 +18,7 @@ export const Contact = () => {
           <div className="space-y-8 animate-fade-in">
             <div>
               <h3 className="font-playfair text-2xl font-semibold text-burgundy mb-6">
-                Practical Information
+                Get In Touch
               </h3>
               
               <div className="space-y-4">
@@ -27,18 +27,8 @@ export const Contact = () => {
                     <span className="text-burgundy font-semibold">📍</span>
                   </div>
                   <div>
-                    <h4 className="font-medium text-burgundy mb-1">Workshop</h4>
-                    <p className="text-charcoal/70">12 Rue de la Patisserie<br />75001 Paris, France</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-burgundy font-semibold">📞</span>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-burgundy mb-1">Phone</h4>
-                    <p className="text-charcoal/70">+33 1 42 36 78 90</p>
+                    <h4 className="font-medium text-burgundy mb-1">Location</h4>
+                    <p className="text-charcoal/70">Gurugram, Delhi NCR<br />India</p>
                   </div>
                 </div>
 
@@ -48,20 +38,19 @@ export const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-burgundy mb-1">Email</h4>
-                    <p className="text-charcoal/70">contact@atelier-patisserie.fr</p>
+                    <p className="text-charcoal/70">hello@sweetartistry.in</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-burgundy font-semibold">🕒</span>
+                    <span className="text-burgundy font-semibold">💼</span>
                   </div>
                   <div>
-                    <h4 className="font-medium text-burgundy mb-1">Hours</h4>
+                    <h4 className="font-medium text-burgundy mb-1">Services</h4>
                     <p className="text-charcoal/70">
-                      Tuesday - Saturday: 8:00 AM - 7:00 PM<br />
-                      Sunday: 8:00 AM - 2:00 PM<br />
-                      Closed Mondays
+                      Custom Desserts • Event Catering<br />
+                      Dessert Consulting • Recipe Development
                     </p>
                   </div>
                 </div>
@@ -70,14 +59,14 @@ export const Contact = () => {
 
             <div className="p-6 elegant-border bg-champagne/30">
               <h4 className="font-playfair text-xl font-semibold text-burgundy mb-3">
-                Special Orders
+                Collaboration Opportunities
               </h4>
               <p className="text-charcoal/70 mb-4">
-                For your events (weddings, birthdays, corporate), 
-                please contact me at least 48 hours in advance.
+                From custom celebrations to restaurant collaborations, 
+                I'm always excited to explore new creative partnerships.
               </p>
               <button className="bg-burgundy text-cream px-6 py-3 rounded-lg font-medium hover:bg-burgundy/90 transition-colors duration-200">
-                Request a Quote
+                Start a Project
               </button>
             </div>
           </div>
@@ -86,7 +75,7 @@ export const Contact = () => {
             <div className="aspect-square lg:aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Pastry workshop"
+                alt="Artisanal dessert creation workspace"
                 className="w-full h-full object-cover hover-lift"
               />
             </div>
