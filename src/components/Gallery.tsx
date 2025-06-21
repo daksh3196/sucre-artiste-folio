@@ -48,10 +48,18 @@ export function Gallery() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-5xl font-playfair text-burgundy mb-12 text-center"
+          className="text-5xl font-playfair text-burgundy mb-2 text-center"
         >
           Creations
         </motion.h2>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="font-dancing text-2xl text-gold mb-12 text-center"
+        >
+          Sweet Artistry in Every Detail
+        </motion.div>
 
         {!selectedCategory ? (
           // Categories Grid
@@ -84,7 +92,7 @@ export function Gallery() {
                     <div className="absolute inset-0 bg-gradient-to-t from-burgundy/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-2xl font-playfair text-burgundy mb-3">{category.name}</h3>
+                    <h3 className="text-2xl font-dancing text-burgundy mb-3">{category.name}</h3>
                     <p className="text-charcoal/70 line-clamp-2">{category.description}</p>
                     <div className="mt-4 flex items-center text-burgundy font-medium">
                       View Collection

@@ -38,7 +38,7 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-            className="text-3xl sm:text-4xl lg:text-5xl text-gold mt-2 block font-cormorant"
+            className="text-3xl sm:text-4xl lg:text-5xl text-gold mt-2 block font-dancing"
           >
             Pastry Chef
           </motion.span>
@@ -48,7 +48,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-          className="text-xl sm:text-2xl text-charcoal/80 mb-12 max-w-3xl mx-auto leading-relaxed"
+          className="font-dancing text-2xl sm:text-3xl text-charcoal/80 mb-12 max-w-3xl mx-auto leading-relaxed"
         >
           Passionate pastry chef crafting extraordinary desserts, 
           where precision meets creativity in every sweet creation.

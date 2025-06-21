@@ -7,6 +7,8 @@ export default {
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
+		"./index.html",
+		"./src/**/*.{js,jsx}",
 	],
 	prefix: "",
 	theme: {
@@ -21,6 +23,9 @@ export default {
 			fontFamily: {
 				'heading': ['Lora', 'serif'],
 				'body': ['Open Sans', 'sans-serif'],
+				'playfair': ['"Playfair Display"', 'serif'],
+				'cormorant': ['"Cormorant Garamond"', 'serif'],
+				'dancing': ['"Dancing Script"', 'cursive'],
 			},
 			colors: {
 				'cream': '#FDF8F3',
@@ -113,13 +118,35 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fadeIn': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'slideUp': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'fade-in': 'fade-in 0.6s ease-out',
 				'scale-in': 'scale-in 0.3s ease-out',
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fadeIn': 'fadeIn 1s ease-out forwards',
+				'slideUp': 'slideUp 0.6s ease-out forwards'
 			}
 		}
 	},

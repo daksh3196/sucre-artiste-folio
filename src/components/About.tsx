@@ -21,9 +21,10 @@ export const About = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-burgundy mb-6">
+          <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-burgundy mb-2">
             My Story
           </h2>
+          <div className="font-dancing text-2xl text-gold mb-6">A Journey of Passion</div>
           <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
         </motion.div>
 
@@ -38,7 +39,7 @@ export const About = () => {
               initial={{ opacity: 0 }}
               animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="font-playfair text-2xl font-semibold text-burgundy mb-4"
+              className="font-dancing text-3xl text-burgundy mb-4"
             >
               A unique journey from academia to artistry
             </motion.h3>

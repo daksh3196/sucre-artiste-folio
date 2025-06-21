@@ -48,9 +48,10 @@ export const Experience = () => {
     >
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-burgundy mb-6">
+          <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-burgundy mb-2">
             My Professional Journey
           </h2>
+          <div className="font-dancing text-2xl text-gold mb-6">Crafting Sweet Experiences</div>
           <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
           <p className="text-xl text-charcoal/70 max-w-3xl mx-auto">
             From academic excellence to pastry artistry, each step has shaped 
@@ -78,11 +79,11 @@ export const Experience = () => {
                   <IconComponent className="w-8 h-8 text-burgundy" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-burgundy mb-1">
+                  <h3 className="font-dancing text-2xl text-burgundy mb-1">
                     {experience.title}
                   </h3>
                   <p className="text-gold font-medium mb-2">
-                    <i>{experience.company} • {experience.period} </i>
+                    {experience.company} • {experience.period}
                   </p>
                   <p className="text-charcoal/80">
                     {experience.description}
@@ -95,7 +96,7 @@ export const Experience = () => {
 
         <div className="mt-16 text-center">
           <div className="bg-cream/80 rounded-2xl p-8 elegant-border">
-            <h3 className="font-playfair text-2xl font-semibold text-burgundy mb-4">
+            <h3 className="font-dancing text-3xl text-burgundy mb-4">
               Educational Background
             </h3>
             <div className="grid md:grid-cols-2 gap-6">
