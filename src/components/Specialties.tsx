@@ -1,5 +1,7 @@
-
 import { Cake } from "lucide-react";
+import { motion } from "framer-motion";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { cn } from "@/lib/utils";
 
 const specialties = [
   {
@@ -35,11 +37,40 @@ const specialties = [
   }
 ];
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0 }
+};
+
 export const Specialties = () => {
+  const { elementRef, isVisible } = useScrollAnimation();
+
   return (
-    <section id="specialties" className="section-padding bg-cream">
+    <section 
+      id="specialties" 
+      ref={elementRef}
+      className={cn(
+        "section-padding bg-cream",
+        isVisible ? "opacity-100" : "opacity-0"
+      )}
+    >
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-16 animate-fade-in">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-burgundy mb-6">
             My Signature Creations
           </h2>
@@ -48,46 +79,78 @@ export const Specialties = () => {
             Each creation reflects my journey from law to pastry arts, 
             combining precision with artistic flair and innovative techniques.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate={isVisible ? "show" : "hidden"}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {specialties.map((specialty, index) => (
-            <div
-              key={index}
-              className={`group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover-lift animate-fade-in ${
+            <motion.div
+              key={specialty.title}
+              variants={item}
+              className={cn(
+                "group relative overflow-hidden rounded-2xl shadow-xl transition-all duration-500",
+                "hover:shadow-2xl hover:-translate-y-2",
                 specialty.featured ? 'md:col-span-2 lg:col-span-1 lg:row-span-2' : ''
-              }`}
-              style={{ animationDelay: `${index * 0.1}s` }}
+              )}
             >
-              <div className={`aspect-square ${specialty.featured ? 'lg:aspect-[4/5]' : ''}`}>
-                <img
+              <div className={cn(
+                "aspect-square",
+                specialty.featured ? 'lg:aspect-[4/5]' : ''
+              )}>
+                <motion.img
                   src={specialty.image}
                   alt={specialty.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover transition-transform duration-700"
+                  whileHover={{ scale: 1.1 }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-burgundy/80 via-burgundy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <motion.div 
+                  className="absolute inset-0 bg-gradient-to-t from-burgundy/90 via-burgundy/40 to-transparent"
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
               </div>
               
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                <div className="flex items-center gap-2 mb-2">
-                  <Cake className="w-5 h-5 text-gold" />
+              <motion.div 
+                className="absolute bottom-0 left-0 right-0 p-6 text-white"
+                initial={{ y: 20, opacity: 0 }}
+                whileHover={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="bg-gold/20 p-2 rounded-full">
+                    <Cake className="w-5 h-5 text-gold" />
+                  </div>
                   <h3 className="font-playfair text-xl font-semibold">
                     {specialty.title}
                   </h3>
                 </div>
-                <p className="text-cream/90 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                <p className="text-cream/90 text-sm leading-relaxed">
                   {specialty.description}
                 </p>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
-        <div className="text-center mt-12">
-          <button className="bg-burgundy text-cream px-8 py-4 rounded-lg font-medium text-lg hover:bg-burgundy/90 transition-colors duration-200 hover-lift">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="text-center mt-16"
+        >
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-burgundy text-cream px-8 py-4 rounded-lg font-medium text-lg hover:bg-burgundy/90 transition-colors duration-200 shadow-lg hover:shadow-xl"
+          >
             View My Portfolio
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
       </div>
     </section>
   );

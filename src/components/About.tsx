@@ -1,60 +1,125 @@
+import { motion } from "framer-motion";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { cn } from "@/lib/utils";
 
 export const About = () => {
+  const { elementRef, isVisible } = useScrollAnimation();
+
   return (
-    <section id="about" className="section-padding bg-champagne/30">
+    <section 
+      id="about" 
+      ref={elementRef}
+      className={cn(
+        "section-padding bg-champagne/30",
+        isVisible ? "opacity-100" : "opacity-0"
+      )}
+    >
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16 animate-fade-in">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-burgundy mb-6">
             My Story
           </h2>
           <div className="w-24 h-1 bg-gold mx-auto mb-8"></div>
-        </div>
+        </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 animate-fade-in">
-            <h3 className="font-playfair text-2xl font-semibold text-burgundy mb-4">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="space-y-6"
+          >
+            <motion.h3 
+              initial={{ opacity: 0 }}
+              animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="font-playfair text-2xl font-semibold text-burgundy mb-4"
+            >
               A unique journey from academia to artistry
-            </h3>
+            </motion.h3>
             
-            <p className="text-lg text-charcoal/80 leading-relaxed">
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-lg text-charcoal/80 leading-relaxed"
+            >
               My path to pastry began with a solid foundation in International Studies 
               and Law from Jindal Global University. This academic background instilled 
               in me the precision and attention to detail that now defines my approach 
               to pastry arts.
-            </p>
+            </motion.p>
             
-            <p className="text-lg text-charcoal/80 leading-relaxed">
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="text-lg text-charcoal/80 leading-relaxed"
+            >
               Professionally trained at APCA Malaysia in Gurugram, I discovered my true 
               passion lies in creating extraordinary desserts that tell stories through 
               flavors, textures, and artistic presentation.
-            </p>
+            </motion.p>
 
-            <div className="grid grid-cols-2 gap-6 pt-6">
-              <div className="text-center p-4 elegant-border bg-cream/50">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="grid grid-cols-2 gap-6 pt-6"
+            >
+              <motion.div 
+                whileHover={{ scale: 1.05 }}
+                className="text-center p-4 elegant-border bg-cream/50 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
                 <div className="font-playfair text-3xl font-bold text-gold mb-2">3+</div>
                 <div className="text-charcoal/70">Years Experience</div>
-              </div>
-              <div className="text-center p-4 elegant-border bg-cream/50">
+              </motion.div>
+              <motion.div 
+                whileHover={{ scale: 1.05 }}
+                className="text-center p-4 elegant-border bg-cream/50 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
                 <div className="font-playfair text-3xl font-bold text-gold mb-2">200+</div>
                 <div className="text-charcoal/70">Unique Creations</div>
-              </div>
-            </div>
-          </div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
 
-          <div className="relative animate-scale-in">
-            <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
-              <img
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="relative"
+          >
+            <motion.div 
+              initial={{ scale: 0.9 }}
+              animate={isVisible ? { scale: 1 } : { scale: 0.9 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="aspect-square rounded-2xl overflow-hidden shadow-2xl"
+            >
+              <motion.img
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.6 }}
                 src="https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 alt="Pastry chef creating artisanal desserts"
-                className="w-full h-full object-cover hover-lift"
+                className="w-full h-full object-cover"
               />
-            </div>
-            <div className="absolute -bottom-6 -right-6 bg-gold p-6 rounded-2xl shadow-xl">
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              className="absolute -bottom-6 -right-6 bg-gold p-6 rounded-2xl shadow-xl"
+            >
               <div className="text-burgundy font-playfair text-lg font-semibold">
                 "Precision meets<br />passion"
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>

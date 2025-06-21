@@ -1,34 +1,34 @@
+import { cn } from "@/lib/utils";
 
-export const Footer = () => {
+interface FooterProps extends React.HTMLAttributes<HTMLElement> {}
+
+export const Footer = ({ className, ...props }: FooterProps) => {
   return (
-    <footer className="bg-burgundy text-cream py-12">
+    <footer className={cn("bg-burgundy text-cream py-12", className)} {...props}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <div className="font-playfair text-3xl font-bold mb-4">
-            Sweet Artistry
-          </div>
-          <p className="text-cream/80 mb-6 max-w-2xl mx-auto">
-            Where precision meets passion, and every dessert tells a story 
-            of creativity, dedication, and the sweet journey from law to artistry.
-          </p>
-          
-          <div className="flex justify-center space-x-6 mb-8">
-            <a href="#" className="text-cream/70 hover:text-gold transition-colors duration-200">
-              Instagram
-            </a>
-            <a href="#" className="text-cream/70 hover:text-gold transition-colors duration-200">
-              LinkedIn
-            </a>
-            <a href="#" className="text-cream/70 hover:text-gold transition-colors duration-200">
-              WhatsApp
-            </a>
-          </div>
-          
-          <div className="border-t border-cream/20 pt-8">
-            <p className="text-cream/60 text-sm">
-              © 2024 Sweet Artistry. All rights reserved. Crafted with love in Gurugram, India.
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 className="font-playfair text-2xl font-bold mb-4">Sweet Artistry</h3>
+            <p className="text-cream/80">
+              Crafting extraordinary desserts with passion and precision.
             </p>
           </div>
+          <div>
+            <h4 className="font-playfair text-xl font-semibold mb-4">Contact</h4>
+            <p className="text-cream/80">Email: contact@sweetartistry.com</p>
+            <p className="text-cream/80">Phone: +91 98765 43210</p>
+          </div>
+          <div>
+            <h4 className="font-playfair text-xl font-semibold mb-4">Follow Us</h4>
+            <div className="flex space-x-4">
+              <a href="#" className="text-cream/80 hover:text-gold transition-colors">Instagram</a>
+              <a href="#" className="text-cream/80 hover:text-gold transition-colors">Facebook</a>
+              <a href="#" className="text-cream/80 hover:text-gold transition-colors">Twitter</a>
+            </div>
+          </div>
+        </div>
+        <div className="mt-8 pt-8 border-t border-cream/20 text-center text-cream/60">
+          <p>&copy; {new Date().getFullYear()} Sweet Artistry. All rights reserved.</p>
         </div>
       </div>
     </footer>

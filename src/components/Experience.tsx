@@ -1,5 +1,6 @@
-
 import { Briefcase, Award, Users, Calendar } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { cn } from "@/lib/utils";
 
 const experiences = [
   {
@@ -33,10 +34,20 @@ const experiences = [
 ];
 
 export const Experience = () => {
+  const { elementRef, isVisible } = useScrollAnimation();
+
   return (
-    <section id="experience" className="section-padding bg-champagne/20">
+    <section 
+      id="experience" 
+      ref={elementRef}
+      className={cn(
+        "py-20 px-4 bg-champagne/20",
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
+        "transition-all duration-1000 ease-out"
+      )}
+    >
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-16">
           <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-burgundy mb-6">
             My Professional Journey
           </h2>
@@ -51,43 +62,38 @@ export const Experience = () => {
           {experiences.map((experience, index) => {
             const IconComponent = experience.icon;
             return (
-              <div
-                key={index}
-                className="group relative bg-cream rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift animate-fade-in elegant-border"
-                style={{ animationDelay: `${index * 0.1}s` }}
+              <div 
+                key={experience.title}
+                className={cn(
+                  "bg-cream p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1",
+                  "flex flex-col md:flex-row items-start md:items-center gap-6",
+                  isVisible && `animate-[fadeIn_0.6s_ease-out_${index * 0.2}s_forwards]`
+                )}
+                style={{
+                  opacity: 0,
+                  animation: isVisible ? `fadeIn 0.6s ease-out ${index * 0.2}s forwards` : 'none'
+                }}
               >
-                <div className="flex flex-col md:flex-row gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-burgundy/10 rounded-full flex items-center justify-center group-hover:bg-burgundy/20 transition-colors duration-300">
-                      <IconComponent className="w-8 h-8 text-burgundy" />
-                    </div>
-                  </div>
-                  
-                  <div className="flex-grow">
-                    <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                      <div>
-                        <h3 className="font-playfair text-2xl font-semibold text-burgundy mb-2">
-                          {experience.title}
-                        </h3>
-                        <h4 className="text-lg font-medium text-charcoal mb-2">
-                          {experience.company}
-                        </h4>
-                      </div>
-                      <div className="text-gold font-medium text-lg">
-                        {experience.period}
-                      </div>
-                    </div>
-                    <p className="text-charcoal/80 leading-relaxed">
-                      {experience.description}
-                    </p>
-                  </div>
+                <div className="bg-burgundy/10 p-4 rounded-full">
+                  <IconComponent className="w-8 h-8 text-burgundy" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-burgundy mb-1">
+                    {experience.title}
+                  </h3>
+                  <p className="text-gold font-medium mb-2">
+                    {experience.company} • {experience.period}
+                  </p>
+                  <p className="text-charcoal/80">
+                    {experience.description}
+                  </p>
                 </div>
               </div>
             );
           })}
         </div>
 
-        <div className="mt-16 text-center animate-fade-in">
+        <div className="mt-16 text-center">
           <div className="bg-cream/80 rounded-2xl p-8 elegant-border">
             <h3 className="font-playfair text-2xl font-semibold text-burgundy mb-4">
               Educational Background
